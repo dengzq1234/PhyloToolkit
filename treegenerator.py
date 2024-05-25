@@ -8,7 +8,7 @@ from ete4 import Tree
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Generate a random phylogenetic tree.")
     parser.add_argument("-n", "--number", type=int, help="Number of species.")
-    parser.add_argument("-l", "--name-list", nargs='+', help="List of species names.")
+    parser.add_argument("-l", "--name-list", help="List of species names.")
     parser.add_argument("-m", "--model", type=str, choices=['yule', 'uniform'], default='yule', help="Random tree model.")
     parser.add_argument("-o", "--output", type=str, required=True, help="Output filename.")
     return parser.parse_args()
